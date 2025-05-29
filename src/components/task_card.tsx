@@ -255,7 +255,7 @@ const TaskDetailModal = ({
                 </div>
 
                 <button
-                  className="flex w-full items-center rounded p-2 text-sm text-red-600 hover:bg-red-50 mt-4"
+                  className="mt-4 flex w-full items-center rounded p-2 text-sm text-red-600 hover:bg-red-50"
                   onClick={() => deleteTaskMutation.mutate({ taskId: task.id })}
                 >
                   <svg
