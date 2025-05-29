@@ -7,8 +7,6 @@
  * need to use are documented accordingly near the end.
  */
 
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
 import { initTRPC, TRPCError } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import { type Session } from "next-auth";
@@ -16,7 +14,8 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 
 import { getServerAuthSession } from "../auth";
-const prisma = new PrismaClient();
+import { db } from "../db";
+
 /**
  * 1. CONTEXT
  *
@@ -42,7 +41,7 @@ interface CreateContextOptions {
 const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
     session: opts.session,
-    prisma: prisma,
+    prisma: db,
   };
 };
 
