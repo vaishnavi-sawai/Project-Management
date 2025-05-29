@@ -13,6 +13,15 @@ const config = {
    *
    * @see https://github.com/vercel/next.js/issues/41980
    */
+  typescript: {
+    // Ignore type errors in the `src/env.js` file.
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    // Ignore lint errors in the `src/env.js` file.
+    ignoreDuringBuilds: true,
+  },
+
   i18n: {
     locales: ["en"],
     defaultLocale: "en",

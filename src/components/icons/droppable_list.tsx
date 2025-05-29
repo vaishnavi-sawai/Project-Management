@@ -1,6 +1,6 @@
 import { useDrop } from "react-dnd";
 import { DotsIcon, PlusIcon } from "~/components/icons/icon_component";
-import { TaskCard } from "../project_and_tasks/task_card";
+import { TaskCard } from "./task_card";
 import type { DroppableListProps } from "~/types/project";
 
 export const DroppableList = ({

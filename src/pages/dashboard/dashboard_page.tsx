@@ -9,10 +9,10 @@ import {
   PlusIcon,
   TableIcon,
 } from "~/components/icons/icon_component";
-import { CreateProjectModal } from "../project_and_tasks/project_modal";
-import { ProjectCard } from "../project_and_tasks/project_card";
-import { DroppableList } from "./droppable_list";
-import { DashboardHeader } from "./dashboard_header";
+import { CreateProjectModal } from "../../components/icons/project_modal";
+import { ProjectCard } from "../../components/icons/project_card";
+import { DroppableList } from "../../components/icons/droppable_list";
+import { DashboardHeader } from "../../components/icons/dashboard_header";
 import { api } from "~/utils/api";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
